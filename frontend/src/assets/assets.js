@@ -5,7 +5,8 @@ import contact from './contact.jpg'
 
 
 export const assets={
- ecommerce, about,contact,stripe,
+ ecommerce, about,contact
 }
+
 
 
