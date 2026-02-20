@@ -29,8 +29,16 @@ app.get('/',(req,res)=>{
 })
 
 
-app.listen(port, ()=> console.log('server started on port '+port ))
+//app.listen(port, ()=> console.log('server started on port '+port ))
 
+// Remove or wrap your app.listen:
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(4000, () => console.log('Server running on 4000'));
+}
+
+// Ensure you export the app
+export default app; // If using "type": "module"
+// module.exports = app; // If using CommonJS (require)
 
 
 
